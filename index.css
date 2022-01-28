@@ -267,14 +267,11 @@ body {
     .background {
         height: 100vw;
     }
+
     .traffic-light {
-        display: flex;
-        flex-direction: row;
-        right: 50%;
-        transform: translateX(50%);
-        margin: 15px auto;
-        
+        transform: translateX(100%);
     }
+    
 
     .box {
         right: 50%;
