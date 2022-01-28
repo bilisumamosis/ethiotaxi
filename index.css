@@ -260,22 +260,26 @@ body {
 
 @media (max-width: 708px) {
     
+    
+
     body {
         transform: rotateZ(90deg);
+        
     }
 
     .background {
         height: 100vw;
     }
-
-    .traffic-light {
-        transform: translateX(100%);
-    }
     
+    .traffic-light {
+        display: none;
+    }
 
+
+    
+    
     .box {
-        right: 50%;
-        transform: translateX(50%);
+        
         width: 466px;
         height: 333px;
     }
@@ -287,19 +291,82 @@ body {
         margin: 5px;
         font-size: 20px;
         
-        color: grey;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+        
     }
 
     @keyframes vibrate {
         from {
-            transform: translateY(0) translateX(50%);
+            transform: translateY(0) ;
         }
     
         to {
-            transform: translateY(1px) translateX(50%);
+            transform: translateY(0.75px) ;
+        }
+    }
+
+    @keyframes motion {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-5000px);
         }
     }
     
+    .start-motion {
+        animation: motion 10s 0s linear infinite;
+    }
+    
+    .stop-motion {
+        animation: motion 10s 0s linear infinite paused;
+    }
+
+    .traffic-light-m {
+        position: absolute;
+        background-color: grey;
+        z-index: 1000;
+        top: 0;
+        left: 50%;
+        display: flex;
+        flex-direction: row;
+        transform: translateX(50%);
+        background-color: grey;
+        border: 3px solid black;
+        border-radius: 15px;
+        margin: 5px;
+    }
+    .traffic-light {
+        position: absolute;
+        background-color: grey;
+        border: 1px solid black;
+        top: 0;
+        right: 0;
+        border-radius: 15px;
+        margin: 15px;
+    }
+    
+    .round-m {
+        height: 30px;
+        width: 30px;
+        margin: 3px;
+        background-color: red;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+    
+    .round-m:hover {
+        cursor: pointer;
+    }
+    .green-m {
+        background-color: green;
+    }
+    .yellow-m {
+        background-color: yellow;
+        
+    }
+    .red-m {
+        background-color: red;
+    }
     
 }

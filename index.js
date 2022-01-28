@@ -3,6 +3,11 @@
 let green = document.querySelector(".green");
 let yellow = document.querySelector(".yellow");
 let red = document.querySelector(".red");
+
+let greenm = document.querySelector(".green-m");
+let yellowm = document.querySelector(".yellow-m");
+let redm = document.querySelector(".red-m");
+
 let car = document.querySelector(".car");
 let body = document.querySelector("body")
 let isMoving = false;
@@ -55,6 +60,15 @@ green.addEventListener("click", () => {
 });
 
 red.addEventListener("click", () => {
+    stopMoving()
+})
+
+greenm.addEventListener("click", () => {
+    startMoving()
+    
+});
+
+redm.addEventListener("click", () => {
     stopMoving()
 })
 
